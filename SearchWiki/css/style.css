@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(213, 213, 213);
+}
+
+body header {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resultSearch {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+}
