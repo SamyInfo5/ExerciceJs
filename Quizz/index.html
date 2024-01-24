@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>QuizzApp</title>
+  </head>
+  <body>
+    <header>
+      <h1>Quizz Party</h1>
+    </header>
+    <div class="gameStart">
+      <span
+        >Bonjour, Ceci est un jeu de type Quizz, il y a de tous comme questions
+        <br />
+        facile, difficile, moyenne, avec differente category, envie de passer un bon moment en
+        testant t'est connaissance ? <br />
+        je t'en prie ! Mets ton pseudo et clique sur le button !
+      </span>
+      <input type="text" placeholder="Pseudo" id="user" />
+      <span class="startBtn" id="startBtn">Start The Quizz</span>
+    </div>
+    <div class="gameEnd hidden">
+        <p>Voici votre score <span id="userText"></span> : <span id="scoreUser"></span></p>
+        <table>
+            <thead>
+                <th>Players</th>
+                <th>Score</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="player"></td>
+                    <td id="score"></td>
+                </tr>
+            </tbody>
+        </table>
+        <span class="reset" id="reset">Rejouer !</span>
+    </div>
+    <div class="game hidden">
+      <div class="question"></div>
+      <div class="responses"></div>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
