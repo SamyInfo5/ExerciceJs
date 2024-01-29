@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+    color: white;
+}
+
+body {
+    background-image: url(../assets/Planete.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 10vh;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.loc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.logoLoc {
+    width: 5%;
+}
+
+.temp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.minMax {
+    display: flex;
+    justify-content: space-between;
+}
+
+.infosBox {
+    background: lightcoral;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+}

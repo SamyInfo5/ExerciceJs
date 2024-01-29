@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Méteo</title>
+  </head>
+  <body>
+    <header>
+      <h1>Météo</h1>
+      <img id="iconMeteo" />
+    </header>
+    <div class="container">
+      <div class="loc">
+        <img src="./assets/loc.png" class="logoLoc" />
+        <p id="loc"></p>
+      </div>
+      <div class="temp">
+        <div class="temps">
+          <p id="now"></p>
+          <div class="minMax">
+            <p id="min"></p>
+            <span>&emsp;|&emsp;</span>
+            <p id="max"></p>
+          </div>
+        </div>
+      </div>
+      <div class="infosBox">
+        <div class="main">
+          <p id="humidity"></p>
+        </div>
+        <div class="pressure">
+          <p id="pressure"></p>
+        </div>
+        <div class="wind">
+          <div class="deg" id="deg"></div>
+          <div class="gust" id="gust"></div>
+          <div class="speed" id="speed"></div>
+        </div>
+        <div class="ressent">
+          <div class="ressent" id="ressent"></div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
