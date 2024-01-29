@@ -21,9 +21,50 @@ Source that helped me :
 Source that helped me :
 
 <ul>
-    <li><a href="https://www.youtube.com/watch?v=vKrdqbBK_tE">keupress event</a></li>
+    <li><a href="https://www.youtube.com/watch?v=vKrdqbBK_tE">keypress event</a></li>
 </ul> 
 
-4. Cookie Generator 
 
-<p>The aim of this exercise was to create a cookie generator, display them and delete them</p>
+4. application Meteo
+
+<p>The aim of this exercise was to create a meteo app in navigator </p>
+
+Source that helped me :
+
+<ul>
+    <li><a href="https://openweathermap.org/api/one-call-3">api</a></li>
+    <li><a href="https://openweathermap.org/current#data">call api</a></li>
+    <li><a href="https://openweathermap.org/current#data"> add a fontstyle</a></li>
+    <li><a href="https://developer.mozilla.org/fr/docs/Web/API/Geolocation"> Geolocalisation</a></li>
+</ul> 
+
+5. degrader Generator 
+
+<p>The aim of this exercise was to create a degrader Generator</p>
+
+Source that helped me :
+
+<ul>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+</ul> 
+
+6. pomodoro
+
+<p>The aim of this exercise was to create </p>
+
+Source that helped me :
+
+<ul>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+</ul> 
+
