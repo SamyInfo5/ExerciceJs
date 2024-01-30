@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>degrader Générator</title>
-</head>
-<body>
+  </head>
+  <body>
+    <header>
+      <h1>Générateur de dégrader</h1>
+    </header>
+
+    <div class="container">
+      <div class="colorWrapper">
+        <div class="col1">
+          <label for="">First Color</label>
+          <input type="color" id="color-one" />
+          <input type="text" id="colorTextOne">
+        </div>
+        <div class="col2">
+          <label for="">Color Two</label>
+          <input type="color" id="color-two" />
+          <input type="text" id="colorTextTwo">
+        </div>
+        <div class="col3">
+          <label for="">Color Three</label>
+          <input type="color" id="color-three" />
+          <input type="text" id="colorTextThree">
+        </div>
+        <button id="random" onclick="changeBackground()">Random Gradient</button>
+      </div>
+      <div class="result">
+        <div class="color-gradient" id="color-gradient"></div>
+      </div>
+    </div>
     <script src="./js/index.js"></script>
-</body>
+  </body>
 </html>
