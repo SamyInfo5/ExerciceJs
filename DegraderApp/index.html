@@ -13,25 +13,34 @@
 
     <div class="container">
       <div class="colorWrapper">
+        <select name="" id="select">
+          <option value="right">to right</option>
+          <option value="left">to left</option>
+          <option value="top">to top</option>
+          <option value="bottom">to bottom</option>
+        </select>
         <div class="col1">
           <label for="">First Color</label>
-          <input type="color" id="color-one" />
-          <input type="text" id="colorTextOne">
+          <input type="color" id="colorPicker1" />
+          <input type="text" id="colorTextOne" />
         </div>
         <div class="col2">
           <label for="">Color Two</label>
-          <input type="color" id="color-two" />
-          <input type="text" id="colorTextTwo">
+          <input type="color" id="colorPicker2" />
+          <input type="text" id="colorTextTwo" />
         </div>
         <div class="col3">
           <label for="">Color Three</label>
-          <input type="color" id="color-three" />
-          <input type="text" id="colorTextThree">
+          <input type="color" id="colorPicker3" />
+          <input type="text" id="colorTextThree" />
         </div>
-        <button id="random" onclick="changeBackground()">Random Gradient</button>
+        <button id="random" onclick="changeBackground()">
+          Random Gradient
+        </button>
       </div>
       <div class="result">
         <div class="color-gradient" id="color-gradient"></div>
+        <div class="textResult" id="textResult"></div>
       </div>
     </div>
     <script src="./js/index.js"></script>

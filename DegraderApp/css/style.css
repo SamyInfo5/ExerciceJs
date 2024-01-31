@@ -21,3 +21,17 @@ body {
   border: 1px solid black;
   height: 300px;
 }
+
+.colorWrapper{
+  columns: 3;
+  text-align: center;
+  display: flex;
+  margin: 10px 0 10px 0;
+}
+
+.col1, .col2, .col3{
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 3px;
+  
+}

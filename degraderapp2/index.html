@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Génerator background-gradient</h1>
+    </header>
+    <div class="box-item">
+      <div class="box" id="box"></div>
+      <button id="addColor">add color</button>
+
+      <div class="inputs" id="inputs">
+        <input type="color" id="color1" />
+        <input type="color" id="color2" />
+      </div>
+      <div class="choices">
+        <div class="linear">
+          <button
+            class="btn-gradienttype choices_active"
+            id="btn-choice_linear"
+            onClick="setGdradientType('linear')"
+          >
+            linear
+          </button>
+          <button id="btn-choice_radial" onClick="setGdradientType('radial')">
+            radial
+          </button>
+          <input
+            type="range"
+            name=""
+            id="rangeValue"
+            value="90"
+            min="0"
+            max="360"
+          />
+        </div>
+      </div>
+      <button id="save">Save Color</button>
+      <div class="results">
+        <code id="result_code">
+        </code>
+        <button onclick="copy()">Copy</button>
+      </div>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

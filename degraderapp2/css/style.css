@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  display: flex;
+  justify-content: center;
+}
+.box-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.box-item button {
+  width: 100px;
+  height: 50px;
+  border: 1px solid;
+  border-radius: 30px;
+  margin: 10px 10px;
+}
+.box {
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+}
+
+.linear {
+    display: flex;
+}
+
+.choices button{
+    width: 200px;
+    cursor: pointer;
+}
+
+.choices_active {
+    background: rgb(168, 168, 244);
+}
