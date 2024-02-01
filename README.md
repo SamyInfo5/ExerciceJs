@@ -45,12 +45,8 @@ Source that helped me :
 Source that helped me :
 
 <ul>
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
+    <li><a href="https://cssgradient.io/color-shades/"> Exemple </a></li>
+    <li><a href="https://www.freecodecamp.org/news/copy-text-to-clipboard-javascript/"> copy to clipboard js</a></li>
 </ul> 
 
 6. pomodoro

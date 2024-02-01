@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background: rgb(40, 111, 111);
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+button {
+  background: transparent;
+  height: 50px;
+  width: 125px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn_active {
+  background: rgb(29, 81, 81);
+}
+
+.boxTime {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(58, 160, 160);
+  border-radius: 20px;
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.time {
+  font-size: 50px;
+}
+
+.hidden {
+  display: none;
+}
+
+.btnlaunch button {
+  background: white;
+  color: darkblue;
+  font-size: 30px;
+  text-transform: uppercase;
+}
