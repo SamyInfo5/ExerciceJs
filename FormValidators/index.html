@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Validators Forms</title>
+</head>
+<body>
+    
+    <div class="box">
+        <div class="container">
+            <form>
+                <label for="">First Name :</label>
+                <input type="text" placeholder="Ex : John" id="first_name" required>
+
+                <label for="">Last Name :</label>
+                <input type="text" placeholder="Ex : Doe" id="last_name" required>
+
+                <label for="">Email :</label>
+                <input type="email" name="" id="email" placeholder="JohnDoe@email.com" required>
+
+                <label for="">Password :</label>
+                <input type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+
+                <label for="">Confirm Password :</label>
+                <input type="password" name="confirmpassword" id="confirmpassword" required>
+
+                <div id="message">
+                    <h3>Password must contain the following:</h3>
+                    <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                    <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                    <p id="number" class="invalid">A <b>number</b></p>
+                    <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                  </div>
+
+                <button type="button" id="validators">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="succes">
+        <div class="box_succes">
+            <span id="box_succes_text">Your Acount has been Validate</span>
+        </div>
+    </div>
+
+    <div id="not_succes">
+        <div class="box_error">
+            <span id="box_error_text"></span>
+        </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>
