@@ -2,52 +2,16 @@ const keyApi = "31U1bqlQs6hNTPvgY7zeXzS4KN2ZT0HQCgrlfr40nypNqgqY3q1XE2eW";
 const BASE_URL = "https://api.pexels.com/v1/search";
 const box_Game = document.getElementById("game");
 const play = document.getElementById("playGame");
+const pointsDeDepart = 1000;
+const facteurDeDecroissance = 0.85;
 let flippedCards = 0;
 let tab;
 let tab2;
 let tabCheck = [];
 let tabChild = [];
 let cardValidate = 0;
-
-play.addEventListener("click", () => {
-  fetchData(url, keyApi)
-    .then((data) => {
-      tab = data.photos;
-      tab2 = data.photos;
-      tab2.forEach((element) => {
-        tab.push(element);
-      });
-      shuffle(tab);
-      tab.forEach((item) => {
-        const flipCard = document.createElement("div");
-        flipCard.classList.add("flip-card");
-        const flipCardInner = document.createElement("div");
-        flipCardInner.classList.add("flip-card-inner");
-        flipCardInner.setAttribute("id", item.id);
-        const flipCardFront = document.createElement("div");
-        flipCardFront.classList.add("flip-card-front");
-        const imgFront = document.createElement("img");
-        imgFront.src = "./assets/front.png";
-        imgFront.style.height = "13vh";
-        const flipCardBack = document.createElement("div");
-        const imgBack = document.createElement("img");
-        imgBack.classList.add("backImg");
-        imgBack.src = item.src.tiny;
-        imgBack.style.height = "10vh";
-
-        flipCard.appendChild(flipCardInner);
-        flipCardInner.appendChild(flipCardFront);
-        flipCardInner.appendChild(flipCardBack);
-        flipCardFront.appendChild(imgFront);
-        flipCardBack.appendChild(imgBack);
-        box_Game.appendChild(flipCard);
-      });
-      selectCard();
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-    });
-});
+let timer = 30;
+let score = pointsDeDepart;
 
 const shuffle = (arr) => {
   arr.sort(() => Math.random() - 0.5);
@@ -152,6 +116,66 @@ const allCardReveal = () => {
   }
 };
 
+const timerPoint = () => {
+  let interval = setInterval(() => {
+    score *= facteurDeDecroissance;
+    console.log("Points actuels:", score);
+
+    if (cardValidate == params.per_page || score == 0) {
+      const scorePlayer = document.getElementById("score");
+      scorePlayer.innerHTML = score;
+      clearInterval(interval);
+      alert("Failed");
+    }
+  }, 3000);
+};
+
+const game = () => {
+  fetchData(url, keyApi)
+    .then((data) => {
+      tab = data.photos;
+      tab2 = data.photos;
+      tab2.forEach((element) => {
+        tab.push(element);
+      });
+      shuffle(tab);
+      tab.forEach((item) => {
+        const flipCard = document.createElement("div");
+        flipCard.classList.add("flip-card");
+        const flipCardInner = document.createElement("div");
+        flipCardInner.classList.add("flip-card-inner");
+        flipCardInner.setAttribute("id", item.id);
+        const flipCardFront = document.createElement("div");
+        flipCardFront.classList.add("flip-card-front");
+        const imgFront = document.createElement("img");
+        imgFront.src = "./assets/front.png";
+        imgFront.style.height = "13vh";
+        const flipCardBack = document.createElement("div");
+        const imgBack = document.createElement("img");
+        imgBack.classList.add("backImg");
+        imgBack.src = item.src.tiny;
+        imgBack.style.height = "10vh";
+
+        flipCard.appendChild(flipCardInner);
+        flipCardInner.appendChild(flipCardFront);
+        flipCardInner.appendChild(flipCardBack);
+        flipCardFront.appendChild(imgFront);
+        flipCardBack.appendChild(imgBack);
+        box_Game.appendChild(flipCard);
+      });
+      selectCard();
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+  timerPoint();
+};
+
+play.addEventListener("click", () => {
+  game()
+});
+
 replay.addEventListener("click", () => {
-  
-})
+  endGame.style.display = "none";
+  game()
+});
