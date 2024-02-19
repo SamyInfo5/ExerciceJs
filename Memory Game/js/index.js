@@ -2,16 +2,12 @@ const keyApi = "31U1bqlQs6hNTPvgY7zeXzS4KN2ZT0HQCgrlfr40nypNqgqY3q1XE2eW";
 const BASE_URL = "https://api.pexels.com/v1/search";
 const box_Game = document.getElementById("game");
 const play = document.getElementById("playGame");
-const pointsDeDepart = 1000;
-const facteurDeDecroissance = 0.85;
 let flippedCards = 0;
 let tab;
 let tab2;
 let tabCheck = [];
 let tabChild = [];
 let cardValidate = 0;
-let timer = 30;
-let score = pointsDeDepart;
 
 const shuffle = (arr) => {
   arr.sort(() => Math.random() - 0.5);
@@ -116,15 +112,25 @@ const allCardReveal = () => {
   }
 };
 
+let pointsDeDepart = 1000;
+let facteurDeDecroissance = 0.9;
+let timer = 30;
+let score = pointsDeDepart;
+
 const timerPoint = () => {
   let interval = setInterval(() => {
     score *= facteurDeDecroissance;
     console.log("Points actuels:", score);
+    timer -= 1;
 
-    if (cardValidate == params.per_page || score == 0) {
+    if (cardValidate == params.per_page) {
       const scorePlayer = document.getElementById("score");
-      scorePlayer.innerHTML = score;
       clearInterval(interval);
+      score = pointsDeDepart;
+      scorePlayer.innerHTML = Math.round(score);
+      pointsDeDepart = 1000;
+      timer = 30;
+    } else if (timer == 0) {
       alert("Failed");
     }
   }, 3000);
@@ -172,10 +178,10 @@ const game = () => {
 };
 
 play.addEventListener("click", () => {
-  game()
+  game();
 });
 
 replay.addEventListener("click", () => {
   endGame.style.display = "none";
-  game()
+  game();
 });
