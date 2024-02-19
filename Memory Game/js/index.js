@@ -178,6 +178,7 @@ const game = () => {
 
 play.addEventListener("click", () => {
   game();
+  play.disabled = true
 });
 
 replay.addEventListener("click", () => {
