@@ -126,7 +126,6 @@ const timerPoint = () => {
     if (cardValidate == params.per_page) {
       const scorePlayer = document.getElementById("score");
       clearInterval(interval);
-      score = pointsDeDepart;
       scorePlayer.innerHTML = Math.round(score);
       pointsDeDepart = 1000;
       timer = 30;
