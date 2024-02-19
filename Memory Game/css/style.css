@@ -6,6 +6,7 @@
 
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -26,8 +27,8 @@ body {
 
 .flip-card {
     background-color: transparent;
-    width: 150px;
-    height: 150px;
+    width: 15vw;
+    height: 15vh;
     perspective: 1000px;
   }
   
@@ -41,7 +42,11 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   }
   
-  .flip-card:hover .flip-card-inner {
+  .flip-card .flip-card-inner {
+    transform: rotateY(0deg);
+  }
+
+  .flip-card .flip-card-inner .flip {
     transform: rotateY(180deg);
   }
   
@@ -51,6 +56,11 @@ body {
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+  }
+
+  .flip-card-back img {
+    width: 5vw;
+    height: 5vh;
   }
   
   .flip-card-front {
