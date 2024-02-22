@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  width: 89%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.box-slider {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  position: relative;
+  width: 99%;
+  height: 500px;
+  display: flex;
+  overflow-y: scroll;
+}
+
+.imageBox {
+  display: flex;
+  justify-content: center;
+  width: 130vw;
+  overflow: scroll;
+  scroll-behavior: smooth;
+}
+
+.imageBox img:not(:first-child) {
+  display: none;
+}
+
+.imageBox img:first-child {
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+img {
+  height: 500px !important;
+  width: 770px !important;
+}
+
+.right {
+  background: transparent;
+  position: absolute;
+  left: 5px;
+  top: 45%;
+  cursor: pointer;
+}
+
+.left {
+  background: transparent;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  cursor: pointer;
+}
+
+.right-one::after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 20px;
+  top: 5px;
+  background: rgb(134, 134, 246);
+  transform: rotate(140deg);
+}
+.right-two::before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 20px;
+  top: 17px;
+  background: rgb(134, 134, 246);
+  transform: rotate(50deg);
+}
+
+.left-one::after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 20px;
+  top: -25px;
+  background: rgb(134, 134, 246);
+  transform: rotate(45deg);
+}
+.left-two::before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 20px;
+  top: -13px;
+  background: rgb(134, 134, 246);
+  transform: rotate(130deg);
+}
