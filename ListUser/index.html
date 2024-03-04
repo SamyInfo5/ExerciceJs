@@ -11,6 +11,11 @@
 </header>
 <body>
     <div class="container">
+        <div class="buttons-filtre">
+            <button id="orderletters">Ordre Aplhabétique</button>
+            <button id="ordernumber">Ordre Numerique</button>
+            <button id="addUsers">Add User</button>
+        </div>
         <div class="box-table">
             <table>
                 <caption>
@@ -24,28 +29,21 @@
                         <th>Adress</th>
                     </tr>
                 </thead>
-                <tbody>
-                    
-                </tbody>
+                <tbody id="tbody"></tbody>
             </table>
-        </div>
-        <div class="buttons-filtre">
-            <button id="orderletters">Ordre Aplhabétique</button>
-            <button id="ordernumber">Ordre Numerique</button>
-            <button id="addUsers">Add User</button>
         </div>
         <div class="BoxAddUsers" id="BoxAddUsers">
             <h1>Create Users</h1>
             <form action="">
                 <label for="">Name Users</label>
-                <input type="text" placeholder="Name" is="User">
+                <input type="text" placeholder="Name" id="user">
                 <label for="">Age</label>
-                <input type="text" placeholder="Age" id="Age">
+                <input type="text" placeholder="Age" id="age">
                 <label for="">Telephone Number</label>
-                <input type="text" placeholder="Tel" id="Tel">
+                <input type="text" placeholder="Tel" id="tel">
                 <label for="">Adress</label>
-                <input type="text" placeholder="Adress" id="Adress">
-                <button id="sendForm">Submit</button>
+                <input type="text" placeholder="Adress" id="adress">
+                <button type="button" id="sendForm">Submit</button>
             </form>
         </div>
     </div>
