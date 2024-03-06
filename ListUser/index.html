@@ -12,8 +12,6 @@
 <body>
     <div class="container">
         <div class="buttons-filtre">
-            <button id="orderletters">Ordre Aplhabétique</button>
-            <button id="ordernumber">Ordre Numerique</button>
             <button id="addUsers">Add User</button>
         </div>
         <div class="box-table">
@@ -23,9 +21,9 @@
                 </caption>
                 <thead>
                     <tr>
-                        <th>User</th>
-                        <th>Age</th>
-                        <th>Tel</th>
+                        <th id="filtreUser" onclick="filterName(storage)">User</th>
+                        <th onclick="filterAge(storage)">Age</th>
+                        <th >Tel</th>
                         <th>Adress</th>
                     </tr>
                 </thead>

@@ -1,8 +1,6 @@
 console.log('ça fonctionne No Stress :) !');
 
 const btnAddUser = document.getElementById('addUsers');
-const btnOrderLetters = document.getElementById('orderletters');
-const btnOrderNumber = document.getElementById('ordernumber');
 const BoxAddUsers = document.getElementById('BoxAddUsers');
 const sendForm = document.getElementById('sendForm');
 let storage = JSON.parse(localStorage.getItem("UserData"));
@@ -42,23 +40,33 @@ const saveData = (list) => {
     }
   };
 
-  
-storage.forEach(item => {
-    const tr = document.createElement('tr')
-    const tbody = document.getElementById('tbody')
-    tbody.appendChild(tr)
-    item.forEach(element => {
-        const th = document.createElement('th')
-        th.innerHTML = element
-        tr.appendChild(th)
-    });
-})
+const getData = (data) => {
+  if(!data) return
+  data.forEach(item => {
+      const tr = document.createElement('tr')
+      const tbody = document.getElementById('tbody')
+      tbody.appendChild(tr)
+      item.forEach(element => {
+          const th = document.createElement('th')
+          th.innerHTML = element
+          tr.appendChild(th)
+      });
+  })
+}
 
+const filterAge = (data) => {
+  const trdel = document.querySelectorAll('tbody tr')
+  trdel.forEach((item => { console.log('item'), item.remove() }))
+  data.sort((a, b) => parseInt(a[1]) - parseInt(b[1]));
+  getData(data)
+}
 
-btnOrderLetters.addEventListener('click', () => {
+const filterName = (data) => {
+  const trdel = document.querySelectorAll('tbody tr')
+  trdel.forEach((item => { console.log('item'), item.remove() }))
+  console.log(data.sort())
+  data.sort()
+  getData(data)
+}
 
-})
-
-btnOrderNumber.addEventListener('click', () => {
-
-})
+getData(storage)
