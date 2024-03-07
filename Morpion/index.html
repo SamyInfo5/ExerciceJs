@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>morpion</title>
+  </head>
+  <body>
+    <h1>Morpions</h1>
+    <div class="box-game">
+      <div class="game">
+        <div id="0" class="case" onclick="selectCase(0)"></div>
+        <div id="1" class="case" onclick="selectCase(1)"></div>
+        <div id="2" class="case" onclick="selectCase(2)"></div>
+        <div id="3" class="case" onclick="selectCase(3)"></div>
+        <div id="4" class="case" onclick="selectCase(4)"></div>
+        <div id="5" class="case" onclick="selectCase(5)"></div>
+        <div id="6" class="case" onclick="selectCase(6)"></div>
+        <div id="7" class="case" onclick="selectCase(7)"></div>
+        <div id="8" class="case" onclick="selectCase(8)"></div>
+      </div>
+    </div>
+    <div class="start-finish" id="start-finish">
+      <div class="start">
+        <h2>Welcome to Morpions Game</h2>
+        <button>Play</button>
+      </div>
+      <div class="finish">
+        <h1><span id="winner"></span> Win</h1>
+        <button id="replay">replay</button>
+      </div>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
