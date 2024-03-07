@@ -1,5 +1,8 @@
 console.log("Coucou Petit Fifou");
 const allCase = document.querySelectorAll(".case");
+const start_finish = document.getElementById("start-finish");
+const finish = document.getElementById("finish");
+const start = document.getElementById("start");
 let img;
 
 const selectCase = (number) => {
@@ -18,7 +21,7 @@ const checkCaseAI = (array, number) => {
   if (array[number].children.length == 0) {
     addAI(number);
   } else {
-    IA()
+    IA();
   }
 };
 
@@ -50,33 +53,52 @@ const random = () => {
 };
 
 victoryConditions = [
-  [0, 1, 2], [3, 4, 5], [6, 7, 8], 
-  [0, 3, 6], [1, 4, 7], [2, 5, 8], 
-  [0, 4, 8], [2, 4, 6] 
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8],
+  [0, 4, 8],
+  [2, 4, 6],
 ];
 
 const checkVictory = (symbol) => {
   for (const condition of victoryConditions) {
-      const [a, b, c] = condition;
-      if (allCase[a].children.length && allCase[a].children[0].src.includes(symbol) &&
-          allCase[b].children.length && allCase[b].children[0].src.includes(symbol) &&
-          allCase[c].children.length && allCase[c].children[0].src.includes(symbol)) {
-          return true;
-      }
+    const [a, b, c] = condition;
+    if (
+      allCase[a].children.length &&
+      allCase[a].children[0].src.includes(symbol) &&
+      allCase[b].children.length &&
+      allCase[b].children[0].src.includes(symbol) &&
+      allCase[c].children.length &&
+      allCase[c].children[0].src.includes(symbol)
+    ) {
+      return true;
+    }
   }
-  return false; 
+  return false;
 };
 
 const checkEndGame = () => {
   if (checkVictory("croix.png")) {
-      console.log("Joueur X a gagné !");
+    finish.style.display = "flex";
+    start_finish.style.display = "flex";
+    const winnerUser = document.getElementById("winner");
+    winnerUser.innerHTML = "User";
   } else if (checkVictory("circle.png")) {
-      console.log("Joueur O a gagné !");
+    finish.style.display = "flex";
+    start_finish.style.display = "flex";
+    const winnerUser = document.getElementById("winner");
+    winnerUser.innerHTML = "AI ";
   } else {
-      // Vérifiez s'il y a égalité ou si le jeu continue
+    // Vérifiez s'il y a égalité ou si le jeu continue
   }
 };
 
-const replay = () => {
-  
-}
+const replay = () => {};
+
+const play = () => {
+  start_finish.style.display = "none";
+  start.style.display = "none"
+};
